@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2d2d2d;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus,
+input[type="date"]:focus {
+    outline: none;
+    background: #3a3a3a;
+    box-shadow: 0 0 0 2px #0077ff;
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder,
+select::placeholder,
+input[type="date"]::placeholder {
+    color: #999;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: #0077ff;
+    color: white;
+}
+
+.btn-secondary {
+    background: #333;
+    color: #ccc;
+}
+
+.btn-success {
+    background: #00cc66;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.delivery-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.payment-options {
+    margin-bottom: 15px;
+}
+
+.radio-option {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #2d2d2d;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    background: #3a3a3a;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-minus, .btn-plus {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-minus:hover, .btn-plus:hover {
+    background: #0077ff;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.label {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.toggle-section {
+    margin-bottom: 15px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-label {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 10px;
+}
+
+/* Стили переключателя */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00cc66;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Улучшенная анимация */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.delivery-time-option {
+    margin-bottom: 15px;
+}
+
+.date-picker {
+    position: relative;
+    margin-top: 10px;
+}
+
+.date-picker input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2d2d2d;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.date-picker input[type="date"]:focus {
+    outline: none;
+    background: #3a3a3a;
+    box-shadow: 0 0 0 2px #0077ff;
+}
+
+/* Стиль для отключенных элементов */
+input[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
